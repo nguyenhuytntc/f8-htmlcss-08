@@ -27,17 +27,10 @@
     padding: 16px 0;
   }
 }
-.top-bar__more {
-  display: none;
-}
-@media (max-width: 991.98px) {
-  .top-bar__more {
-    display: block;
-  }
-}
 
 .navbar {
   margin-left: 129px;
+  z-index: 9;
 }
 @media (max-width: 1199.98px) {
   .navbar {
@@ -46,15 +39,70 @@
 }
 @media (max-width: 991.98px) {
   .navbar {
-    display: none;
+    position: fixed;
+    inset: 0 50% 0 0;
+    background-color: #fff;
+    margin-left: 0;
+    padding: 20px 0;
+    translate: -100%;
+    transition: translate 0.5s;
+  }
+  .navbar.show {
+    translate: 0;
+  }
+  .navbar.show ~ .navbar__overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.navbar__close-btn {
+  display: none;
+}
+@media (max-width: 991.98px) {
+  .navbar__close-btn {
+    display: block;
+    padding: 10px 40px;
+  }
+}
+.navbar__overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity, visibility;
+  transition-duration: 0.5s;
+}
+@media (max-width: 991.98px) {
+  .navbar__overlay {
+    z-index: 8;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
   }
 }
 .navbar__list {
   display: flex;
   align-items: center;
 }
+@media (max-width: 991.98px) {
+  .navbar__list {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: auto;
+    height: calc(100% - 18px);
+  }
+}
 .navbar__item:hover .dropdown {
   display: block;
+}
+@media (max-width: 991.98px) {
+  .navbar__item {
+    width: 100%;
+  }
+  .navbar__item:hover .dropdown {
+    display: none;
+  }
+  .navbar__item--active .dropdown {
+    display: block !important;
+  }
 }
 .navbar__link {
   display: flex;
@@ -65,6 +113,15 @@
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+@media (max-width: 991.98px) {
+  .navbar__link {
+    padding: 0 40px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%; /* 150% */
+    justify-content: space-between;
+  }
 }
 
 .top-act {
@@ -77,18 +134,12 @@
   }
 }
 .top-act__group {
-  display: flex;
   align-items: center;
   min-width: 50px;
   height: 50px;
   border-radius: 0.8rem;
   background: var(--top-act-group-bg-color);
   box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
-}
-@media (max-width: 767.98px) {
-  .top-act__group {
-    display: none;
-  }
 }
 .top-act__btn {
   padding: 13px 20px;
