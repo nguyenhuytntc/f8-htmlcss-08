@@ -1561,6 +1561,11 @@ html.dark {
   --cate-item-bg: #171c28;
   --cate-item-thumb-bg: #292e39;
   --cate-item-title-color: #fff;
+  --filter-btn-color: #fff;
+  --filter-btn-bg: #171c28;
+  --product-card-bg: #171c28;
+  --product-card-shadow: rgba(237, 237, 246, 0.2);
+  --like-btn-shadow: rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 991.98px) {
   html.dark {
