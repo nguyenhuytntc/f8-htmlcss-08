@@ -38,6 +38,10 @@ html.dark {
     // Like button
     --like-btn-shadow: rgba(0, 0, 0, 0.2);
 
+    // Filter form
+    --filter-form-bg: #fff;
+    --filter-form-shadow: rgba(200, 200, 200, 0.4);
+
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
