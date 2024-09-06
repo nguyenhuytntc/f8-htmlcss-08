@@ -41,6 +41,7 @@ html.dark {
     // Filter form
     --filter-form-bg: #fff;
     --filter-form-shadow: rgba(200, 200, 200, 0.4);
+    --filter-form-tag-bg: #171c28;
 
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
