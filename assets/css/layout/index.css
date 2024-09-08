@@ -240,4 +240,13 @@
   margin-left: auto;
 }
 
+.footer {
+  padding: 50px 0;
+  background: var(--footer-bg-color);
+}
+.footer__row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.3fr 1.5fr;
+}
+
 /*# sourceMappingURL=index.css.map */
