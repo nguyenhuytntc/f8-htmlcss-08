@@ -7,5 +7,131 @@
     &__row {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 1.3fr 1.5fr;
+        gap: 60px;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__logo {
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+
+    &__help-text,
+    &__desc {
+        font-size: 14px;
+    }
+
+    &__desc {
+        margin-top: 30px;
+        line-height: 1.5;
+
+        @include abstracts.screen(lg) {
+            width: min(400px, 100%);
+        }
+    }
+
+    &__help-text {
+        margin-top: 40px;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 0;
+    }
+
+    &__input {
+        width: 100%;
+        height: 46px;
+        padding: 8px 12px;
+        font-size: 1.5rem;
+        border: 2px solid #d2d1d6;
+        border-radius: 6px;
+
+        @include abstracts.screen(lg) {
+            width: 40%;
+        }
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+    &__list {
+        margin-top: 18px;
+    }
+
+    &__link,
+    &__text {
+        font-size: 14px;
+        line-height: 1.4;
+        padding: 8px 0;
+    }
+
+    &__link {
+        display: inline-block;
+
+        &:hover {
+            color: #0071dc;
+        }
+    }
+
+    &__label {
+        margin-top: 20px;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: 50px;
+    }
+
+    &__copyright {
+        font-size: 1.4rem;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        filter: grayscale(50%);
+
+        &--facebook {
+            background: #4863a9;
+        }
+        &--youtube {
+            background: #ff0000;
+        }
+        &--tiktok {
+            background: #000000;
+        }
+        &--twitter {
+            background: #4999e6;
+        }
+        &--linkedin {
+            background: #2f71ab;
+        }
+    }
+
+    &__social-icon {
+        width: 14px;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%)
+            contrast(99%);
     }
 }

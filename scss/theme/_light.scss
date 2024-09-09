@@ -43,6 +43,7 @@ html {
 
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
+        --footer-bg-color: var(--header-bg-color);
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
     @include abstracts.screen(md) {
