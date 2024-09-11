@@ -39,9 +39,15 @@
 
     &__form {
         display: flex;
-        align-items: center;
         gap: 10px;
         padding: 16px 0;
+
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+        }
+        @include abstracts.screen(lg) {
+            flex-direction: row;
+        }
     }
 
     &__input {
@@ -54,6 +60,9 @@
 
         @include abstracts.screen(lg) {
             width: 40%;
+        }
+        @include abstracts.screen(sm) {
+            width: 100%;
         }
     }
 
@@ -71,6 +80,12 @@
         font-size: 14px;
         line-height: 1.4;
         padding: 8px 0;
+    }
+
+    &__text {
+        @include abstracts.screen(lg) {
+            width: min(400px, 100%);
+        }
     }
 
     &__link {
@@ -91,6 +106,11 @@
         justify-content: space-between;
 
         margin-top: 50px;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column-reverse;
+            gap: 30px;
+        }
     }
 
     &__copyright {
@@ -111,6 +131,11 @@
         height: 32px;
         border-radius: 6px;
         filter: grayscale(50%);
+
+        @include abstracts.screen(sm) {
+            width: 42px;
+            height: 42px;
+        }
 
         &--facebook {
             background: #4863a9;
