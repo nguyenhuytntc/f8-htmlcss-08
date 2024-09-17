@@ -26,6 +26,28 @@
         justify-content: space-between;
         padding: 16px 0;
     }
+
+    &__logo {
+        @include abstracts.screen(lg) {
+            margin-left: 40px;
+            gap: 10px !important;
+
+            &-title {
+                font-size: 1.8rem !important;
+            }
+            &-img {
+                width: 24px;
+            }
+        }
+
+        @include abstracts.screen(md) {
+            margin-left: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+        }
+    }
 }
 .navbar {
     margin-left: 129px;
