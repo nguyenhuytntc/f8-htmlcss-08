@@ -2659,6 +2659,19 @@ html {
   top: 5px;
 }
 
+.message {
+  padding: 14px 16px;
+  border-radius: 10px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.5rem;
+  width: 100%;
+}
+.message--success {
+  background: rgba(39, 243, 117, 0.2);
+  border: 1.5px solid #46a05c;
+}
+
 .home {
   margin-bottom: 50px;
 }
@@ -2718,6 +2731,7 @@ html {
 }
 .auth__intro-img {
   width: 100%;
+  width: var(--width);
 }
 .auth__intro-logo, .auth__intro-next {
   position: absolute;
@@ -2784,6 +2798,10 @@ html {
 }
 .auth__form {
   width: 100%;
+  margin-top: 30px;
+}
+.auth__form-forgot {
+  margin-top: 10px;
 }
 .auth__link {
   color: #0071dc;
@@ -2826,6 +2844,9 @@ html {
 }
 .auth__text-link {
   font-size: inherit;
+}
+.auth__message {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
