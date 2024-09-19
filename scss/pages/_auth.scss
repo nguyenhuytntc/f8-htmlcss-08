@@ -20,6 +20,7 @@
         justify-content: center;
         flex-direction: column;
         gap: 50px;
+        background: var(--auth-intro-bg);
 
         &-img {
             width: 100%;
@@ -46,6 +47,7 @@
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 2.6rem; /* 144.444% */
+            color: var(--auth-intro-text-color);
 
             @include abstracts.screen(md) {
                 font-size: 1.5rem;
@@ -75,20 +77,21 @@
             text-align: center;
             width: min(460px, 100%);
             margin: auto;
-            padding: 50px 0;
+            padding: 32px 0;
         }
     }
     &__heading {
-        margin-top: 50px;
+        margin-top: 40px;
         font-size: 3rem;
         font-weight: 500;
         line-height: 4.4rem; /* 146.667% */
+        color: var(--auth-heading-color);
     }
 
     &__desc {
         color: #9e9da8;
         margin-top: 10px;
-        padding: 0 30px;
+        padding: 0 20px;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 2.2rem; /* 146.667% */
@@ -114,6 +117,11 @@
         flex-direction: column;
         gap: 30px;
         margin-top: 50px;
+
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+            gap: 20px;
+        }
     }
 
     &__btn {
@@ -130,6 +138,7 @@
 
         @include abstracts.screen(md) {
             font-size: 1.6rem;
+            margin-top: 40px;
         }
 
         &-link {
