@@ -47,6 +47,13 @@ html {
     // Form
     --form-placeholder-color: #d2d1d6;
 
+    // Product Detail
+    --product-detail-bg: #fff;
+
+    // Breadcrumbs
+    --breadcrumbs-bg: #f6f6f6;
+    --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --footer-bg-color: var(--header-bg-color);
