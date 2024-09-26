@@ -48,19 +48,6 @@
     &__form {
         margin-top: 30px;
 
-        &-label {
-            display: block;
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 145.455%;
-
-            &--small {
-                margin-bottom: 10px;
-                font-size: 1.4rem;
-                line-height: 142.857%;
-            }
-        }
-
         &-group {
             margin-top: 20px;
 
@@ -151,33 +138,6 @@
 
         &-input-icon {
             margin-left: 12px;
-        }
-
-        &-tags {
-            display: flex;
-            gap: 10px 20px;
-            flex-wrap: wrap;
-
-            @include abstracts.screen(sm) {
-                gap: 10px;
-            }
-        }
-        &-tag {
-            color: #9e9da8;
-            border-radius: 6px;
-            background: var(--filter-form-tag-bg);
-
-            padding: 6px 12px;
-
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 2rem; /* 142.857% */
-
-            transition: color 0.25s ease-in-out;
-
-            &:hover {
-                color: var(--text-color);
-            }
         }
     }
 
