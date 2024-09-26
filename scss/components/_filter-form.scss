@@ -97,7 +97,7 @@
                 left: var(--max-value);
             }
         }
-        &-select-wrap,
+
         &-text-input {
             border-radius: 6px;
             border: 1px solid #d2d1d6;
@@ -153,34 +153,6 @@
             margin-left: 12px;
         }
 
-        &-select-wrap {
-            display: flex;
-            align-items: center;
-            height: 45px;
-        }
-
-        &-select {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 14px;
-            height: calc(100% - 10px);
-
-            min-width: var(--width, 108px);
-
-            cursor: pointer;
-
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 2rem; /* 142.857% */
-
-            @include abstracts.screen(xl) {
-                flex: 1;
-            }
-        }
-        &-select + &-select {
-            border-left: 1px solid #d2d1d6;
-        }
         &-tags {
             display: flex;
             gap: 10px 20px;
