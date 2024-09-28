@@ -61,8 +61,8 @@ html {
     }
     @include abstracts.screen(md) {
         --cate-item-bg: #fff;
-    }
-    @include abstracts.screen(md) {
+        --product-detail-bg: #fafafd;
         --auth-intro-bg: #fff;
+        --breadcrumbs-bg: #fff;
     }
 }
