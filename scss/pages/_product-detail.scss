@@ -10,10 +10,14 @@
 
 .product-container {
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
 }
 
 .prod-info-content {
-    background: #fff;
+    background: var(--product-detail-info-content-bg);
     border-radius: 20px;
 }
 
@@ -81,9 +85,10 @@
         transition: opacity, border-color;
         transition-duration: 0.3s;
 
-        &:hover {
+        &:not(&--current):hover {
             opacity: 1;
             border-color: #9e9da8;
+            cursor: pointer;
         }
 
         &--current {
@@ -95,6 +100,7 @@
 
 .prod-info {
     padding: 60px;
+    border-radius: 10px;
     background: var(--product-detail-info-bg);
 
     @include abstracts.screen(xxl) {
@@ -123,7 +129,7 @@
     }
 
     &__tag {
-        background: #ededf6;
+        background: var(--product-detail-tag-bg);
     }
 
     &__card {
@@ -145,13 +151,14 @@
     }
 
     &__tax {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+        background: rgba($color: #67b044, $alpha: 0.2);
         color: #67b044;
         font-size: 1.4rem;
         font-weight: 500;
         line-height: 2rem; /* 142.857% */
         padding: 2px 8px;
         margin-left: 10px;
+        border-radius: 4px;
     }
 
     &__total-price {
@@ -192,18 +199,12 @@
     gap: 16px;
     margin-top: 30px;
 
-    @include abstracts.screen(xxl) {
-        margin-top: 20px;
-    }
-
     &__icon {
         align-self: flex-start;
     }
 
     &__title {
-        color: #000;
         font-size: 1.8rem;
-        font-style: normal;
         font-weight: 500;
         line-height: 144.444%;
     }
@@ -211,7 +212,6 @@
     &__desc {
         margin-top: 4px;
         font-size: 1.4rem;
-        font-style: normal;
         font-weight: 400;
         line-height: 142.857%;
     }
